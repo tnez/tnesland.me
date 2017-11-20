@@ -1,6 +1,6 @@
 import Typography from 'typography'
-import githubTheme from 'typography-theme-github'
+import ghTheme from 'typography-theme-github'
 
-const typography = new Typography(githubTheme)
+export const resumeTypography = new Typography(ghTheme, { baseFontSize: '12px' })
 
-export default typography
+export default new Typography()
