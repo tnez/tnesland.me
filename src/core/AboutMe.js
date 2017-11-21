@@ -26,7 +26,7 @@ const statements = [
   'I build platforms in: node, ruby',
   'I explore data with: R, python',
   'I love to wear many hats',
-  'What can I do for you?'
+  'What can I do for you?',
 ]
 
 class AboutMe extends Component {
@@ -68,9 +68,7 @@ class AboutMe extends Component {
           I am a polyglot developer who enjoys the challenge<br />
           of taking on new projects.
         </p>
-        <p>
-          {statements[this.state.idx]}
-        </p>
+        <p>{statements[this.state.idx]}</p>
         <div style={style.indicators}>
           {times(this.renderIndicator, length(statements))}
         </div>
@@ -83,10 +81,7 @@ class AboutMe extends Component {
       return <FaCircle style={style.indicator} />
     } else {
       return (
-        <FaCircleO
-          onClick={() => this.setIdx(idx)}
-          style={style.indicator}
-        />
+        <FaCircleO onClick={() => this.setIdx(idx)} style={style.indicator} />
       )
     }
   }

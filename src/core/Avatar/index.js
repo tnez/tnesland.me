@@ -19,11 +19,7 @@ const style = {
 }
 
 const Avatar = props => (
-  <img
-    alt="face"
-    src={face}
-    style={style.root(props.size)}
-  />
+  <img alt="face" src={face} style={style.root(props.size)} />
 )
 
 Avatar.propTypes = {

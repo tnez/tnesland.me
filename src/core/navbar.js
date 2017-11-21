@@ -24,7 +24,7 @@ const style = {
     alignItems: 'center',
     display: 'flex',
     marginBottom: typography.rhythm(1),
-    padding: typography.rhythm(1/2),
+    padding: typography.rhythm(1 / 2),
   },
   navLinks: {
     display: 'flex',
@@ -38,18 +38,18 @@ const style = {
 export default () => (
   <div style={style.main}>
     <div style={style.navLinks}>
-      <Link to="/" style={{...style.link, color: color.accent}}>
+      <Link to="/" style={{ ...style.link, color: color.accent }}>
         tnesland.me
       </Link>
-      <Link to="/" style={style.link}>Blog</Link>
-      <Link to="/" style={style.link}>Resume</Link>
+      <Link to="/" style={style.link}>
+        Blog
+      </Link>
+      <Link to="/" style={style.link}>
+        Resume
+      </Link>
     </div>
     <div style={style.socialLinks}>
-      <a
-        href="https://github.com/tnez"
-        style={style.link}
-        target="_blank"
-      >
+      <a href="https://github.com/tnez" style={style.link} target="_blank">
         <FaGithubAlt style={style.icon} />
       </a>
       <a

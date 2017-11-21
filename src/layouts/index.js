@@ -39,9 +39,9 @@ TemplateWrapper.propTypes = {
         description: PropTypes.string.required,
         keywords: PropTypes.arrayOf(PropTypes.string).required,
         title: PropTypes.string.required,
-      })
-    })
-  })
+      }),
+    }),
+  }),
 }
 
 export const query = graphql`
