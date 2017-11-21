@@ -1,8 +1,9 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "tnez--tnesland.me",
+  "description": "Personal Website for Travis Nesland",
+  "version": "3.0.0",
+  "license": "UNLICENSED",
+  "private": true,
   "dependencies": {
     "gatsby": "^1.9.110",
     "gatsby-link": "^1.6.27",
