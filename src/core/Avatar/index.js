@@ -12,7 +12,7 @@ const Avatar = props => (
 )
 
 Avatar.propTypes = {
-  size: PropTypes.number.required,
+  size: PropTypes.number.isRequired,
 }
 
 export default Avatar

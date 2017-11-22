@@ -66,11 +66,12 @@ class AboutMe extends Component {
 
   renderIndicator(idx) {
     if (idx === this.state.idx) {
-      return <FaCircle className="mh2" />
+      return <FaCircle className="mh2" key={idx} />
     } else {
       return (
         <FaCircleO
           className="mh2"
+          key={idx}
           onClick={() => this.setIdx(idx)}
         />
       )
