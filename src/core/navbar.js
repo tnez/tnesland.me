@@ -41,10 +41,7 @@ export default () => (
       <Link to="/" style={{ ...style.link, color: color.accent }}>
         tnesland.me
       </Link>
-      <Link to="/" style={style.link}>
-        Blog
-      </Link>
-      <Link to="/" style={style.link}>
+      <Link to="/resume" style={style.link}>
         Resume
       </Link>
     </div>
