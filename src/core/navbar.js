@@ -4,31 +4,13 @@ import FaBook from 'react-icons/lib/fa/book'
 import FaGithubAlt from 'react-icons/lib/fa/github-alt'
 import FaLinkedinSqure from 'react-icons/lib/fa/linkedin-square'
 
-import { color, typography } from '../theme'
+import { color } from '../theme'
 
 const style = {
-  icon: {
-    //
-  },
   link: {
     color: color.primary,
-    marginRight: typography.rhythm(1),
     textDecoration: 'none',
     textTransform: 'lowercase',
-  },
-  logo: {
-    color: color.primary,
-    fontSize: '2em',
-  },
-  main: {
-    alignItems: 'center',
-    display: 'flex',
-    marginBottom: typography.rhythm(1),
-    padding: typography.rhythm(1 / 2),
-  },
-  navLinks: {
-    display: 'flex',
-    alignItems: 'center',
   },
   socialLinks: {
     marginLeft: 'auto',
@@ -36,32 +18,47 @@ const style = {
 }
 
 export default () => (
-  <div style={style.main}>
-    <div style={style.navLinks}>
-      <Link to="/" style={{ ...style.link, color: color.accent }}>
+  <div className="flex items-center pa2 f4">
+    <div className="flex items-center">
+      <Link
+        className="ph2"
+        style={{ ...style.link, color: color.accent }}
+        to="/"
+      >
         tnesland.me
       </Link>
-      <Link to="/resume" style={style.link}>
+      <Link
+        className="ph2"
+        style={style.link}
+        to="/resume"
+      >
         Resume
       </Link>
     </div>
     <div style={style.socialLinks}>
-      <a href="https://github.com/tnez" style={style.link} target="_blank">
-        <FaGithubAlt style={style.icon} />
+      <a
+        className="ph2"
+        href="https://github.com/tnez"
+        style={style.link}
+        target="_blank"
+      >
+        <FaGithubAlt />
       </a>
       <a
+        className="ph2"
         href="https://www.linkedin.com/in/tnesland"
         style={style.link}
         target="_blank"
       >
-        <FaLinkedinSqure style={style.icon} />
+        <FaLinkedinSqure />
       </a>
       <a
+        className="ph2"
         href="https://scholar.google.com/citations?user=R2m4jbUAAAAJ"
         style={style.link}
         target="_blank"
       >
-        <FaBook style={style.icon} />
+        <FaBook />
       </a>
     </div>
   </div>

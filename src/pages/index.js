@@ -9,8 +9,8 @@ const style = {
 }
 
 const IndexPage = () => (
-  <div style={style.root}>
-    <Avatar size={5} />
+  <div className="tc">
+    <Avatar size={4.5} />
     <AboutMe />
   </div>
 )

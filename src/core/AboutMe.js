@@ -4,22 +4,7 @@ import { length, times } from 'ramda'
 import FaCircle from 'react-icons/lib/fa/circle'
 import FaCircleO from 'react-icons/lib/fa/circle-o'
 
-import { color, typography } from '../theme'
-
-const style = {
-  root: {
-    color: color.primary,
-  },
-  indicator: {
-    cursor: 'pointer',
-  },
-  indicators: {
-    display: 'flex',
-    justifyContent: 'space-around',
-    margin: '0 auto',
-    width: typography.rhythm(6),
-  },
-}
+import { color } from '../theme'
 
 const statements = [
   'I build interfaces in: react, react-native, es6/7/8',
@@ -62,14 +47,17 @@ class AboutMe extends Component {
 
   render() {
     return (
-      <div style={style.root}>
-        <p>
+      <div
+        className="f3 fw2 flex flex-column items-center"
+        style={{ color: color.primary }}
+      >
+        <p className="lh-copy measure-narrow">
           My name is Travis Nesland.<br />
-          I am a polyglot developer who enjoys the challenge<br />
+          I am a polyglot developer who enjoys the challenge
           of taking on new projects.
         </p>
-        <p>{statements[this.state.idx]}</p>
-        <div style={style.indicators}>
+        <p className="lh-copy measure-narrow">{statements[this.state.idx]}</p>
+        <div className="f5 o-60" style={{ color: color.accent }}>
           {times(this.renderIndicator, length(statements))}
         </div>
       </div>
@@ -78,10 +66,13 @@ class AboutMe extends Component {
 
   renderIndicator(idx) {
     if (idx === this.state.idx) {
-      return <FaCircle style={style.indicator} />
+      return <FaCircle className="mh2" />
     } else {
       return (
-        <FaCircleO onClick={() => this.setIdx(idx)} style={style.indicator} />
+        <FaCircleO
+          className="mh2"
+          onClick={() => this.setIdx(idx)}
+        />
       )
     }
   }
