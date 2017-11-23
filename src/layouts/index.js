@@ -7,7 +7,7 @@ import 'tachyons'
 import { Navbar } from '../core'
 
 const TemplateWrapper = props => {
-  const { children } = props
+  const { children, location } = props
   const { title, description, keywords } = props.data.site.siteMetadata
 
   return (
@@ -19,7 +19,7 @@ const TemplateWrapper = props => {
           { name: 'keywords', content: keywords },
         ]}
       />
-      <Navbar />
+      {location.pathname === '/resume' ? null : <Navbar />}
       <div>
         {children()}
       </div>

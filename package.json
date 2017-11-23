@@ -8,6 +8,9 @@
     "gatsby": "^1.9.110",
     "gatsby-link": "^1.6.27",
     "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-source-filesystem": "^1.5.8",
+    "gatsby-transformer-json": "^1.0.12",
+    "luxon": "^0.1.0",
     "ramda": "^0.25.0",
     "react-icons": "^2.2.7",
     "tachyons": "^4.9.0"
