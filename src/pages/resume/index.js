@@ -10,6 +10,7 @@ import { map } from 'ramda'
 import { Avatar } from '../../core'
 import { color } from '../../theme'
 
+import Publication from './publication'
 import Skill from './skill'
 import WorkEntry from './work-entry'
 import resumeData from './resume'
@@ -61,8 +62,9 @@ const Resume = props => (
         <h3 className="f3 bb b--black-10">Work Experience</h3>
         {map(props => <WorkEntry {...props} />, resumeData.work)}
       </article>
-      <article className="mt4">
+      <article className="mv4">
         <h3 className="f3 bb b--black-10">Publications</h3>
+        {map(props => <Publication {...props} />, resumeData.publications)}
       </article>
     </div>
   </div>
