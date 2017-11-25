@@ -7,13 +7,13 @@ import FaLinkedinSqure from 'react-icons/lib/fa/linkedin-square'
 import FaPhone from 'react-icons/lib/fa/phone'
 import { map } from 'ramda'
 
-import { Avatar } from '../../core'
-import { color } from '../../theme'
+import { Avatar } from '../core'
+import { color } from '../theme'
 
-import Publication from './publication'
-import Skill from './skill'
-import WorkEntry from './work-entry'
-import resumeData from './resume'
+import Publication from '../modules/resume/publication'
+import Skill from '../modules/resume/skill'
+import WorkEntry from '../modules/resume/work-entry'
+import resumeData from '../modules/resume/data'
 
 const presentHrefAsLabel = href => href.replace(/https?:\/\//, '')
 
