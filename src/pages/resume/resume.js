@@ -12,23 +12,23 @@ export default {
       countryCode: 'US',
       region: 'South Carolina'
     },
-    profiles: [
-      {
+    profiles: {
+      github: {
         network: 'Github',
         username: 'tnez',
-        url: 'https://www.github.com/tnez'
+        url: 'https://.github.com/tnez'
       },
-      {
+      linkedin: {
         network: 'LinkedIn',
         username: 'tnesland',
         url: 'https://www.linkedin.com/in/tnesland'
       },
-      {
+      scholar: {
         network: 'Google Scholar',
         username: 'Travis Nesland',
         url: 'https://scholar.google.com/citations?user=R2m4jbUAAAAJ&hl'
       }
-    ],
+    },
     summary: 'I am a polyglot developer who gets excited about new ideas and the opportunity to learn. The one constant I have found, is that every project presents some new wrinkle and the best quality I can bring as a developer is the ability to learn quickly and generalize past experience to new paradigms.',
     website: 'http://tnesland.me'
   },

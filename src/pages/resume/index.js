@@ -15,40 +15,73 @@ import Skill from './skill'
 import WorkEntry from './work-entry'
 import resumeData from './resume'
 
+const presentHrefAsLabel = href => href.replace(/https?:\/\//, '')
+
 const Resume = props => (
   <div className="flex">
     <div
       className="flex-stretch white bg-blue"
       style={{ backgroundColor: color.primary }}
     >
-      <article className="tc br2 pa4 lh-copy">
+      <article className="br2 pa4 lh-copy">
         <Avatar size={4} />
-        <h2 className="ma1">{resumeData.basics.name}</h2>
-        <h3 className="fw3 mt1">{resumeData.basics.label}</h3>
-        <hr className="mv3 b--white-20"/>
-        <div className="mv3">
-          <a className="f4 mh3 white-60" href={`tel:${resumeData.basics.phone}`}>
-            <FaPhone />
-          </a>
-          <a className="f4 mh3 white-60" href="mailto:tnesland@gmail.com">
-            <FaEnvelope />
-          </a>
-          <a className="f4 mh3 white-60" href="https://github.com/tnez" target="_blank">
-            <FaGithubAlt />
-          </a>
-          <a className="f4 mh3 white-60" href="https://www.linkedin.com/in/tnesland" target="_blank">
-            <FaLinkedinSqure />
-          </a>
-          <a
-            className="f4 mh3 white-60"
-            href="https://scholar.google.com/citations?user=R2m4jbUAAAAJ"
-            target="_blank"
-          >
-            <FaBook />
-          </a>
-        </div>
-        <hr className="mv3 b--white-20"/>
-        <p className="fw2 measure-narrow lh-copy pa2">
+        <h2 className="mt1 mb0">{resumeData.basics.name}</h2>
+        <h3 className="fw3 mt0 mb3">{resumeData.basics.label}</h3>
+        <ul className="mv0 ph0 tl" style={{ listStyle: 'none' }}>
+          <li>
+            <a
+              className="f6 white-60"
+              href={`tel:${resumeData.basics.phone}`}
+              style={{ textDecoration: 'none' }}
+              target="_blank"
+            >
+              <FaPhone className="f5 mr2"/> {resumeData.basics.phone}
+            </a>
+          </li>
+          <li>
+            <a
+              className="f6 white-60"
+              href={`mailto:${resumeData.basics.email}`}
+              style={{ textDecoration: 'none' }}
+              target="_blank"
+            >
+              <FaEnvelope className="f5 mr2"/> { resumeData.basics.email }
+            </a>
+          </li>
+          <li>
+            <a
+              className="f6 white-60"
+              href={resumeData.basics.profiles.github.url}
+              style={{ textDecoration: 'none' }}
+              target="_blank"
+            >
+              <FaGithubAlt className="f5 mr2"/>
+              {presentHrefAsLabel(resumeData.basics.profiles.github.url)}
+            </a>
+          </li>
+          <li>
+            <a
+              className="f6 white-60"
+              href="https://www.linkedin.com/in/tnesland"
+              style={{ textDecoration: 'none' }}
+              target="_blank"
+            >
+              <FaLinkedinSqure className="f5 mr2"/>
+              {presentHrefAsLabel(resumeData.basics.profiles.linkedin.url)}
+            </a>
+          </li>
+          <li>
+            <a
+              className="f6 white-60"
+              href="https://scholar.google.com/citations?user=R2m4jbUAAAAJ"
+              style={{ textDecoration: 'none' }}
+              target="_blank"
+            >
+              <FaBook className="f5 mr2"/>scholar.google.com
+            </a>
+          </li>
+        </ul>
+        <p className="fw2 measure-narrow lh-copy tl">
           {resumeData.basics.summary}
         </p>
       </article>
