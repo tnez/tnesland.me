@@ -19,7 +19,7 @@ const TemplateWrapper = props => {
           { name: 'keywords', content: keywords },
         ]}
       />
-      {location.pathname === '/resume' ? null : <Navbar />}
+      {location.pathname.match(/\/resume\/?/) ? null : <Navbar />}
       <div>
         {children()}
       </div>
