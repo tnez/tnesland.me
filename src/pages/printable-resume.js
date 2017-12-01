@@ -96,20 +96,29 @@ const PrintableResume = props => (
       </p>
       <div>
         <h3 className="mb2">Skills</h3>
-        {map(props => <Skill {...props} baseFontSize="12px" />, resumeData.skills)}
+        {map(props =>
+          <Skill baseFontSize="12px" key={props.name} {...props} />,
+          resumeData.skills
+        )}
       </div>
     </div>
     <div className="ph4">
       <article>
         <h3 className="mb0 bb b--black-10">Work Experience</h3>
-        {map(props => <WorkEntry {...props} baseFontSize="12px" />, resumeData.work)}
+        {map(props =>
+          <WorkEntry baseFontSize="12px" key={props.company} {...props} />,
+           resumeData.work
+        )}
         <span className="i fw2" style={{fontSize: '12px'}}>
           additional work history available upon request
         </span>
       </article>
       <article>
         <h3 className="mb0 bb b--black-10">Publications</h3>
-        {map(props => <Publication {...props} baseFontSize="12px" />, resumeData.publications)}
+        {map(props =>
+          <Publication baseFontSize="12px" key={props.name} {...props} />,
+           resumeData.publications
+        )}
       </article>
     </div>
   </div>

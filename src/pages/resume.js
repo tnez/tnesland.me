@@ -89,15 +89,24 @@ const Resume = props => (
     <div className="ph5" style={{ color: color.primary }}>
       <article className="mt4">
         <h3 className="f3 bb b--black-10">Skills</h3>
-        {map(props => <Skill {...props} />, resumeData.skills)}
+        {map(props =>
+          <Skill key={props.name} {...props} />,
+          resumeData.skills
+        )}
       </article>
       <article className="mt4">
         <h3 className="f3 bb b--black-10">Work Experience</h3>
-        {map(props => <WorkEntry {...props} />, resumeData.work)}
+        {map(props =>
+          <WorkEntry key={props.company} {...props} />,
+           resumeData.work
+        )}
       </article>
       <article className="mv4">
         <h3 className="f3 bb b--black-10">Publications</h3>
-        {map(props => <Publication {...props} />, resumeData.publications)}
+        {map(props =>
+          <Publication key={props.name} {...props} />,
+           resumeData.publications
+        )}
       </article>
     </div>
   </div>
