@@ -1,10 +1,12 @@
 import React from 'react'
+import Link from 'gatsby-link'
 import FaBook from 'react-icons/lib/fa/book'
 import FaEnvelope from 'react-icons/lib/fa/envelope'
 import FaGlobe from 'react-icons/lib/fa/globe'
 import FaGithubAlt from 'react-icons/lib/fa/github-alt'
 import FaLinkedinSqure from 'react-icons/lib/fa/linkedin-square'
 import FaPhone from 'react-icons/lib/fa/phone'
+import FaPrint from 'react-icons/lib/fa/print'
 import { map } from 'ramda'
 
 import { Avatar } from '../core'
@@ -18,97 +20,109 @@ import resumeData from '../modules/resume/data'
 const presentHrefAsLabel = href => href.replace(/https?:\/\/(www\.)?/, '')
 
 const Resume = props => (
-  <div className="flex">
+  <div className="flex flex-wrap">
     <div
-      className="flex-stretch white bg-blue"
-      style={{ backgroundColor: color.primary }}
+      className="w-100 w-third-l"
+      style={{ backgroundColor: color.primary, color: color.white }}
     >
       <article className="br2 pa4 lh-copy">
         <Avatar size={4} />
-        <h2 className="mt1 mb0">{resumeData.basics.name}</h2>
-        <h3 className="fw3 mt0 mb3">{resumeData.basics.label}</h3>
-        <ul className="mv0 ph0 tl" style={{ listStyle: 'none' }}>
+        <div className="mv2 lh">
+          <h2 className="mv0">{resumeData.basics.name}</h2>
+          <h4 className="mv0 fw4">{resumeData.basics.label}</h4>
+        </div>
+        <ul className="list mv3 ph0 tl lh-copy">
           <li>
             <a
-              className="f6 white-60"
+              className="link white-60"
               href={`tel:${resumeData.basics.phone}`}
-              style={{ textDecoration: 'none' }}
               target="_blank"
             >
-              <FaPhone className="f5 mr2"/> {resumeData.basics.phone}
+              <FaPhone className="mr2"/>
+              {resumeData.basics.phone}
             </a>
           </li>
           <li>
             <a
-              className="f6 white-60"
+              className="link white-60"
               href={`mailto:${resumeData.basics.email}`}
-              style={{ textDecoration: 'none' }}
               target="_blank"
             >
-              <FaEnvelope className="f5 mr2"/> { resumeData.basics.email }
+              <FaEnvelope className="mr2"/>
+              {resumeData.basics.email}
             </a>
           </li>
           <li>
             <a
-              className="f6 white-60"
+              className="link white-60"
               href={resumeData.basics.profiles.github.url}
-              style={{ textDecoration: 'none' }}
               target="_blank"
             >
-              <FaGithubAlt className="f5 mr2"/>
+              <FaGithubAlt className="mr2"/>
               {presentHrefAsLabel(resumeData.basics.profiles.github.url)}
             </a>
           </li>
           <li>
             <a
-              className="f6 white-60"
-              href="https://www.linkedin.com/in/tnesland"
-              style={{ textDecoration: 'none' }}
+              className="link white-60"
+              href={resumeData.basics.profiles.linkedin.url}
               target="_blank"
             >
-              <FaLinkedinSqure className="f5 mr2"/>
+              <FaLinkedinSqure className="mr2"/>
               {presentHrefAsLabel(resumeData.basics.profiles.linkedin.url)}
             </a>
           </li>
           <li>
             <a
-              className="f6 white-60"
-              href="https://scholar.google.com/citations?user=R2m4jbUAAAAJ"
-              style={{ textDecoration: 'none' }}
+              className="link white-60"
+              href={resumeData.basics.profiles.scholar.url}
               target="_blank"
             >
-              <FaBook className="f5 mr2"/>scholar.google.com
+              <FaBook className="mr2" />
+              scholar.google.com
             </a>
           </li>
         </ul>
-        <p className="fw2 measure-narrow lh-copy tl">
+        <p className="measure-narrow lh-copy mv3">
           {resumeData.basics.summary}
         </p>
       </article>
     </div>
-    <div className="ph5" style={{ color: color.primary }}>
+    <div className="w-100 w-two-thirds-l ph4 ph5-l" style={{ color: color.primary }}>
       <article className="mt4">
-        <h3 className="f3 bb b--black-10">Skills</h3>
+        <h3 className="bb b--black-10">Skills</h3>
         {map(props =>
-          <Skill key={props.name} {...props} />,
+          <Skill
+            key={props.name}
+            {...props}
+            tileBackgroundColor={color.white}
+            tileForegroundColor={color.accent}
+          />,
           resumeData.skills
         )}
       </article>
       <article className="mt4">
-        <h3 className="f3 bb b--black-10">Work Experience</h3>
+        <h3 className="bb b--black-10">Work Experience</h3>
         {map(props =>
           <WorkEntry key={props.company} {...props} />,
            resumeData.work
         )}
       </article>
       <article className="mv4">
-        <h3 className="f3 bb b--black-10">Publications</h3>
+        <h3 className="bb b--black-10">Publications</h3>
         {map(props =>
           <Publication key={props.name} {...props} />,
            resumeData.publications
         )}
       </article>
     </div>
+    <Link
+      className="fixed bottom-1 right-1 bg-red br-100 shadow-2"
+      style={{ color: color.white, fontSize: '2em' }}
+      to="/printable-resume"
+    >
+      <FaPrint className="pa2" />
+    </Link>
   </div>
 )
 

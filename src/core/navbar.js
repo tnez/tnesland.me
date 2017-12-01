@@ -18,7 +18,7 @@ const style = {
 }
 
 export default () => (
-  <div className="flex items-center pa2 f4">
+  <div className="flex items-center pa3">
     <div className="flex items-center">
       <Link
         className="ph2"
@@ -30,6 +30,7 @@ export default () => (
       <Link
         className="ph2"
         style={style.link}
+        target="_blank"
         to="/resume"
       >
         Resume

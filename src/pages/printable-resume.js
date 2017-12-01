@@ -45,7 +45,8 @@ const PrintableResume = props => (
             style={{ textDecoration: 'none' }}
             target="_blank"
           >
-            <FaPhone className="mr2"/> {resumeData.basics.phone}
+            <FaPhone className="mr2"/>
+            {resumeData.basics.phone}
           </a>
         </li>
         <li>
@@ -55,7 +56,8 @@ const PrintableResume = props => (
             style={{ textDecoration: 'none' }}
             target="_blank"
           >
-            <FaEnvelope className="mr2"/> { resumeData.basics.email }
+            <FaEnvelope className="mr2"/>
+            { resumeData.basics.email }
           </a>
         </li>
         <li>
@@ -72,7 +74,7 @@ const PrintableResume = props => (
         <li>
           <a
             className="white-60"
-            href="https://www.linkedin.com/in/tnesland"
+            href={resumeData.basics.profiles.linkedin.url}
             style={{ textDecoration: 'none' }}
             target="_blank"
           >
@@ -83,11 +85,12 @@ const PrintableResume = props => (
         <li>
           <a
             className="white-60"
-            href="https://scholar.google.com/citations?user=R2m4jbUAAAAJ"
+            href={resumeData.basics.profiles.scholar.url}
             style={{ textDecoration: 'none' }}
             target="_blank"
           >
-            <FaBook className="mr2"/>scholar.google.com
+            <FaBook className="mr2"/>
+            scholar.google.com
           </a>
         </li>
       </ul>
