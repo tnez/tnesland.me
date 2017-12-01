@@ -21,14 +21,14 @@ export default () => (
   <div className="flex items-center pa3">
     <div className="flex items-center">
       <Link
-        className="ph2"
+        className="dim ph2"
         style={{ ...style.link, color: color.accent }}
         to="/"
       >
         tnesland.me
       </Link>
       <Link
-        className="ph2"
+        className="dim ph2"
         style={style.link}
         target="_blank"
         to="/resume"
@@ -38,7 +38,7 @@ export default () => (
     </div>
     <div style={style.socialLinks}>
       <a
-        className="ph2"
+        className="dim ph2"
         href="https://github.com/tnez"
         style={style.link}
         target="_blank"
@@ -46,7 +46,7 @@ export default () => (
         <FaGithubAlt />
       </a>
       <a
-        className="ph2"
+        className="dim ph2"
         href="https://www.linkedin.com/in/tnesland"
         style={style.link}
         target="_blank"
@@ -54,7 +54,7 @@ export default () => (
         <FaLinkedinSqure />
       </a>
       <a
-        className="ph2"
+        className="dim ph2"
         href="https://scholar.google.com/citations?user=R2m4jbUAAAAJ"
         style={style.link}
         target="_blank"
