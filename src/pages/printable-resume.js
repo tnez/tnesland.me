@@ -37,7 +37,7 @@ const PrintableResume = props => (
         <h2 className="mv0">{resumeData.basics.name}</h2>
         <h4 className="mv1 fw4">{resumeData.basics.label}</h4>
       </div>
-      <ul className="list mv3 ph0 lh-copy" style={{fontSize: '12px'}}>
+      <ul className="list mv3 ph0 lh-copy" style={{ fontSize: '12px' }}>
         <li>
           <a
             className="white-60"
@@ -45,7 +45,7 @@ const PrintableResume = props => (
             style={{ textDecoration: 'none' }}
             target="_blank"
           >
-            <FaPhone className="mr2"/>
+            <FaPhone className="mr2" />
             {resumeData.basics.phone}
           </a>
         </li>
@@ -56,8 +56,8 @@ const PrintableResume = props => (
             style={{ textDecoration: 'none' }}
             target="_blank"
           >
-            <FaEnvelope className="mr2"/>
-            { resumeData.basics.email }
+            <FaEnvelope className="mr2" />
+            {resumeData.basics.email}
           </a>
         </li>
         <li>
@@ -67,7 +67,7 @@ const PrintableResume = props => (
             style={{ textDecoration: 'none' }}
             target="_blank"
           >
-            <FaGithubAlt className="mr2"/>
+            <FaGithubAlt className="mr2" />
             {presentHrefAsLabel(resumeData.basics.profiles.github.url)}
           </a>
         </li>
@@ -78,7 +78,7 @@ const PrintableResume = props => (
             style={{ textDecoration: 'none' }}
             target="_blank"
           >
-            <FaLinkedinSqure className="mr2"/>
+            <FaLinkedinSqure className="mr2" />
             {presentHrefAsLabel(resumeData.basics.profiles.linkedin.url)}
           </a>
         </li>
@@ -89,18 +89,18 @@ const PrintableResume = props => (
             style={{ textDecoration: 'none' }}
             target="_blank"
           >
-            <FaBook className="mr2"/>
+            <FaBook className="mr2" />
             scholar.google.com
           </a>
         </li>
       </ul>
-      <p className="lh-copy tl mv3" style={{fontSize: '12px'}}>
+      <p className="lh-copy tl mv3" style={{ fontSize: '12px' }}>
         {resumeData.basics.summary}
       </p>
       <div>
         <h3 className="mb2">Skills</h3>
-        {map(props =>
-          <Skill baseFontSize="12px" key={props.name} {...props} />,
+        {map(
+          props => <Skill baseFontSize="12px" key={props.name} {...props} />,
           resumeData.skills
         )}
       </div>
@@ -108,19 +108,23 @@ const PrintableResume = props => (
     <div className="ph4">
       <article>
         <h3 className="mb0 bb b--black-10">Work Experience</h3>
-        {map(props =>
-          <WorkEntry baseFontSize="12px" key={props.company} {...props} />,
-           resumeData.work
+        {map(
+          props => (
+            <WorkEntry baseFontSize="12px" key={props.company} {...props} />
+          ),
+          resumeData.work
         )}
-        <span className="i fw2" style={{fontSize: '12px'}}>
+        <span className="i fw2" style={{ fontSize: '12px' }}>
           additional work history available upon request
         </span>
       </article>
       <article>
         <h3 className="mb0 bb b--black-10">Publications</h3>
-        {map(props =>
-          <Publication baseFontSize="12px" key={props.name} {...props} />,
-           resumeData.publications
+        {map(
+          props => (
+            <Publication baseFontSize="12px" key={props.name} {...props} />
+          ),
+          resumeData.publications
         )}
       </article>
     </div>

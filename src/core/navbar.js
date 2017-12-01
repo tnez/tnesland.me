@@ -16,7 +16,6 @@ const style = {
 }
 
 const Navbar = props => {
-
   return (
     <div
       className="fixed top-0 w-100 flex justify-between pa3 mb3 o-90"

@@ -4,18 +4,10 @@ import { DateTime as dt } from 'luxon'
 
 import { color } from '../../theme'
 
-const presentDate = isoString => (
-  dt.fromISO(isoString).toFormat('LLL yyyy')
-)
+const presentDate = isoString => dt.fromISO(isoString).toFormat('LLL yyyy')
 
 const Publication = props => {
-  const {
-    baseFontSize,
-    name,
-    publisher,
-    releaseDate,
-    website,
-  } = props
+  const { baseFontSize, name, publisher, releaseDate, website } = props
 
   const rootStyle = baseFontSize ? { fontSize: baseFontSize } : {}
 
@@ -31,9 +23,7 @@ const Publication = props => {
         </a>
         , {publisher}
       </h4>
-      <h7 className="fw2">
-        Published: {presentDate(releaseDate)}
-      </h7>
+      <h7 className="fw2">Published: {presentDate(releaseDate)}</h7>
     </article>
   )
 }

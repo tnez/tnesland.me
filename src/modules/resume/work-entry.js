@@ -45,14 +45,14 @@ const WorkEntry = props => {
 
   return (
     <article style={rootStyle}>
-      <h4 className="mb1">{position}, {companyLink(company, website)}</h4>
+      <h4 className="mb1">
+        {position}, {companyLink(company, website)}
+      </h4>
       <h7 className="fw2">
         {presentDate(startDate)} - {presentDate(endDate)}
       </h7>
       <p className="mt1 lh-title measure-wide">{summary}</p>
-      <ul>
-        {addIndex(map)(presentHighlight, highlights)}
-      </ul>
+      <ul>{addIndex(map)(presentHighlight, highlights)}</ul>
     </article>
   )
 }
@@ -61,8 +61,7 @@ WorkEntry.propTypes = {
   baseFontSize: PropTypes.string,
   company: PropTypes.string.isRequired,
   endDate: PropTypes.string,
-  highlights: PropTypes.arrayOf(
-    PropTypes.string).isRequired,
+  highlights: PropTypes.arrayOf(PropTypes.string).isRequired,
   position: PropTypes.string.isRequired,
   startDate: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired,

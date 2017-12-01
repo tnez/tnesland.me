@@ -53,8 +53,8 @@ class AboutMe extends Component {
       >
         <p className="lh-copy measure-narrow">
           My name is Travis Nesland.<br />
-          I am a polyglot developer who enjoys the challenge
-          of taking on new projects.
+          I am a polyglot developer who enjoys the challenge of taking on new
+          projects.
         </p>
         <p className="lh-copy measure-narrow">{statements[this.state.idx]}</p>
         <div className="f5 o-60" style={{ color: color.accent }}>
@@ -69,11 +69,7 @@ class AboutMe extends Component {
       return <FaCircle className="mh2" key={idx} />
     } else {
       return (
-        <FaCircleO
-          className="mh2"
-          key={idx}
-          onClick={() => this.setIdx(idx)}
-        />
+        <FaCircleO className="mh2" key={idx} onClick={() => this.setIdx(idx)} />
       )
     }
   }

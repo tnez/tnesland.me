@@ -19,13 +19,7 @@ const presentKeyword = props => (str, idx) => (
 )
 
 const Skill = props => {
-  const {
-    baseFontSize,
-    collectionClass,
-    headerClass,
-    keywords,
-    name,
-  } = props
+  const { baseFontSize, collectionClass, headerClass, keywords, name } = props
 
   const rootStyle = baseFontSize ? { fontSize: baseFontSize } : {}
   return (
@@ -43,9 +37,7 @@ Skill.propTypes = {
   collectionClass: PropTypes.string,
   headerClass: PropTypes.string,
   itemClass: PropTypes.string,
-  keywords: PropTypes.arrayOf(
-    PropTypes.string
-  ).isRequired,
+  keywords: PropTypes.arrayOf(PropTypes.string).isRequired,
   name: PropTypes.string.isRequired,
   tileBackgroundColor: PropTypes.string,
   tileForegroundColor: PropTypes.string,

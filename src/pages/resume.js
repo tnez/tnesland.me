@@ -38,7 +38,7 @@ const Resume = props => (
               href={`tel:${resumeData.basics.phone}`}
               target="_blank"
             >
-              <FaPhone className="mr2"/>
+              <FaPhone className="mr2" />
               {resumeData.basics.phone}
             </a>
           </li>
@@ -48,7 +48,7 @@ const Resume = props => (
               href={`mailto:${resumeData.basics.email}`}
               target="_blank"
             >
-              <FaEnvelope className="mr2"/>
+              <FaEnvelope className="mr2" />
               {resumeData.basics.email}
             </a>
           </li>
@@ -58,7 +58,7 @@ const Resume = props => (
               href={resumeData.basics.profiles.github.url}
               target="_blank"
             >
-              <FaGithubAlt className="mr2"/>
+              <FaGithubAlt className="mr2" />
               {presentHrefAsLabel(resumeData.basics.profiles.github.url)}
             </a>
           </li>
@@ -68,7 +68,7 @@ const Resume = props => (
               href={resumeData.basics.profiles.linkedin.url}
               target="_blank"
             >
-              <FaLinkedinSqure className="mr2"/>
+              <FaLinkedinSqure className="mr2" />
               {presentHrefAsLabel(resumeData.basics.profiles.linkedin.url)}
             </a>
           </li>
@@ -88,31 +88,36 @@ const Resume = props => (
         </p>
       </article>
     </div>
-    <div className="w-100 w-two-thirds-l ph4 ph5-l" style={{ color: color.primary }}>
+    <div
+      className="w-100 w-two-thirds-l ph4 ph5-l"
+      style={{ color: color.primary }}
+    >
       <article className="mt4">
         <h3 className="bb b--black-10">Skills</h3>
-        {map(props =>
-          <Skill
-            key={props.name}
-            {...props}
-            tileBackgroundColor={color.white}
-            tileForegroundColor={color.accent}
-          />,
+        {map(
+          props => (
+            <Skill
+              key={props.name}
+              {...props}
+              tileBackgroundColor={color.white}
+              tileForegroundColor={color.accent}
+            />
+          ),
           resumeData.skills
         )}
       </article>
       <article className="mt4">
         <h3 className="bb b--black-10">Work Experience</h3>
-        {map(props =>
-          <WorkEntry key={props.company} {...props} />,
-           resumeData.work
+        {map(
+          props => <WorkEntry key={props.company} {...props} />,
+          resumeData.work
         )}
       </article>
       <article className="mv4">
         <h3 className="bb b--black-10">Publications</h3>
-        {map(props =>
-          <Publication key={props.name} {...props} />,
-           resumeData.publications
+        {map(
+          props => <Publication key={props.name} {...props} />,
+          resumeData.publications
         )}
       </article>
     </div>
