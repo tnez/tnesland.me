@@ -19,7 +19,10 @@ const TemplateWrapper = props => {
           { name: 'keywords', content: keywords },
         ]}
       />
-      {location.pathname.match(/(printable\-)?resume\/?/) ? null : <Navbar />}
+      {location.pathname.match(/(printable\-)?resume\/?/)
+       ? null
+       : <Navbar />
+      }
       <div>
         {children()}
       </div>
