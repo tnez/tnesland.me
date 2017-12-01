@@ -10,14 +10,17 @@ const presentDate = isoString => (
 
 const Publication = props => {
   const {
+    baseFontSize,
     name,
     publisher,
     releaseDate,
     website,
   } = props
 
+  const rootStyle = baseFontSize ? { fontSize: baseFontSize } : {}
+
   return (
-    <article>
+    <article style={rootStyle}>
       <h4 className="fw4 mb1 measure-wide">
         <a
           href={website}
@@ -28,14 +31,15 @@ const Publication = props => {
         </a>
         , {publisher}
       </h4>
-      <span className="f6 fw2">
+      <h7 className="fw2">
         Published: {presentDate(releaseDate)}
-      </span>
+      </h7>
     </article>
   )
 }
 
 Publication.propTypes = {
+  baseFontSize: PropTypes.string,
   name: PropTypes.string.isRequired,
   publisher: PropTypes.string.isRequired,
   releaseDate: PropTypes.string.isRequired,

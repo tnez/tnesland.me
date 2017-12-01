@@ -25,7 +25,7 @@ const presentDate = isoString => {
 }
 
 const presentHighlight = (str, idx) => (
-  <li className="lh-copy measure" key={idx}>
+  <li className="lh-title measure" key={idx}>
     {str}
   </li>
 )
@@ -41,13 +41,15 @@ const WorkEntry = props => {
     website,
   } = props
 
+  const rootStyle = props.baseFontSize ? { fontSize: props.baseFontSize } : {}
+
   return (
-    <article>
-      <h4 className="lh-title mb0">{position}, {companyLink(company, website)}</h4>
-      <span className="f6 fw2">
+    <article style={rootStyle}>
+      <h4 className="mb1">{position}, {companyLink(company, website)}</h4>
+      <h7 className="fw2">
         {presentDate(startDate)} - {presentDate(endDate)}
-      </span>
-      <p className="lh-copy measure-wide">{summary}</p>
+      </h7>
+      <p className="mt1 lh-title measure-wide">{summary}</p>
       <ul>
         {addIndex(map)(presentHighlight, highlights)}
       </ul>
@@ -56,6 +58,7 @@ const WorkEntry = props => {
 }
 
 WorkEntry.propTypes = {
+  baseFontSize: PropTypes.string,
   company: PropTypes.string.isRequired,
   endDate: PropTypes.string,
   highlights: PropTypes.arrayOf(

@@ -4,13 +4,14 @@ import { addIndex, map } from 'ramda'
 
 import { color } from '../../theme'
 
-const presentKeyword = (str, idx) => (
+const presentKeyword = props => (str, idx) => (
   <li
-    className="dib white br-2 pa1 br2 mh1 measure"
+    className={props.itemClass}
     key={idx}
     style={{
-      border: `solid 1px ${color.accent}`,
-      color: color.accent,
+      backgroundColor: props.tileBackgroundColor,
+      border: `solid 1px ${props.tileForegroundColor}`,
+      color: props.tileForegroundColor,
     }}
   >
     {str}
@@ -18,23 +19,44 @@ const presentKeyword = (str, idx) => (
 )
 
 const Skill = props => {
-  const { keywords, name } = props
+  const {
+    baseFontSize,
+    collectionClass,
+    headerClass,
+    keywords,
+    name,
+  } = props
 
+  const rootStyle = baseFontSize ? { fontSize: baseFontSize } : {}
   return (
-    <article>
-      <h4 className="ma0">{name}</h4>
-      <ul className="f7">
-        {addIndex(map)(presentKeyword, keywords)}
+    <article style={rootStyle}>
+      <h3 className={headerClass}>{name}</h3>
+      <ul className={collectionClass} style={{ fontSize: '0.66em' }}>
+        {addIndex(map)(presentKeyword(props), keywords)}
       </ul>
     </article>
   )
 }
 
 Skill.propTypes = {
+  baseFontSize: PropTypes.string,
+  collectionClass: PropTypes.string,
+  headerClass: PropTypes.string,
+  itemClass: PropTypes.string,
   keywords: PropTypes.arrayOf(
     PropTypes.string
   ).isRequired,
   name: PropTypes.string.isRequired,
+  tileBackgroundColor: PropTypes.string,
+  tileForegroundColor: PropTypes.string,
+}
+
+Skill.defaultProps = {
+  collectionClass: 'ph0 mt0',
+  headerClass: 'mv1 fw2',
+  itemClass: 'dib br2 pa1 ma1',
+  tileBackgroundColor: color.accent,
+  tileForegroundColor: color.white,
 }
 
 export default Skill

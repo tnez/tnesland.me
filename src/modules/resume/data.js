@@ -16,7 +16,7 @@ export default {
       github: {
         network: 'Github',
         username: 'tnez',
-        url: 'https://.github.com/tnez'
+        url: 'https://github.com/tnez'
       },
       linkedin: {
         network: 'LinkedIn',
@@ -64,12 +64,9 @@ export default {
       endDate: '2017-04-14',
       summary: 'Developed platform that handled billing, customer communication, and scheduling for a tech-forward landscaping company based out of Raleigh, NC.',
       highlights: [
-        'Achieved a median customer response time of less than 15 minutes by consolidating all customer communication in single interface for our customer service team',
-        'Routed all SMS communication through Intercom via Twilio',
+        'Achieved a median response time of less than 15 minutes by consolidating all customer communication in single interface',
         'Developed a custom invoicing solution for recurring service',
-        'Developed a custom reporting layer, syncing invoicing data with QuickbooksOnline',
-        'Implemented optional SMS notifications prior to and upon completion of service appointments, with completion notifications including links to service reports',
-        'Helped grow yearly revenue by a factor of 7x from 4.2K to 2.9M'
+        'Helped grow yearly run-rate by a factor of 7x from 4.2K to 2.9M'
       ]
     },
     {
@@ -80,7 +77,6 @@ export default {
       endDate: '2015-01-01',
       summary: 'Developed custom software to process and analyze images of the human brain.',
       highlights: [
-        'Presented research findings as poster at 2012 Society for Neuroscience conference',
         'Developed custom software for extracting relevant metrics from tractography results - used by a small number of neuroscience research groups',
         'Contributing author to more than 15 peer-reviewed, published research articles'
       ]
