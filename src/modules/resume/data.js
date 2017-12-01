@@ -38,7 +38,7 @@ export default {
       position: 'Co-founder, Lead Developer',
       website: 'https://www.farlabhq.com',
       startDate: '2017-07-01',
-      summary: 'Co-founder and developer of a platform to provide a transactional, on-demand manufacturing that scales from zero, reducing barrier of entry to the market for physical products.',
+      summary: 'Co-founder and developer of a platform to provide transactional, on-demand manufacturing that scales from zero, reducing barrier of entry to the market for physical products.',
       highlights: [
         'Developed an interface to visualize and price 3D CAD models',
         'Currently developing platform to enable on-demand manufacturing and order fulfillment of physical goods'
@@ -127,21 +127,23 @@ export default {
         'express',
         'micro',
         'ruby',
-        'roda',
-        'sequel-orm',
         'postgresql',
-        'pouchdb'
+        'mongodb',
+        'pouchdb',
+        'redis'
       ]
     },
     {
       name: 'Data Analysis',
       keywords: [
-        'R',
-        'ggplot',
         'python',
-        'scipy',
         'numpy',
-        'tensorflow'
+        'networkx',
+        'scikit-learn',
+        'tensorflow',
+        'matplotlib',
+        'R',
+        'ggplot'
       ]
     }
   ]
