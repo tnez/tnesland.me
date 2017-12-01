@@ -15,7 +15,7 @@ import Skill from '../modules/resume/skill'
 import WorkEntry from '../modules/resume/work-entry'
 import resumeData from '../modules/resume/data'
 
-const presentHrefAsLabel = href => href.replace(/https?:\/\//, '')
+const presentHrefAsLabel = href => href.replace(/https?:\/\/(www\.)?/, '')
 
 const Resume = props => (
   <div className="flex">
