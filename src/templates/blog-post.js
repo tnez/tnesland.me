@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-export default { data } => {
+export default ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
@@ -9,9 +9,13 @@ export default { data } => {
       <Helmet
         title={`tnesland.me - ${post.frontmatter.title}`}
       />
-      <article>
-        <h2>{post.frontmatter.title}</h2>
-        <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+      <article className="pa4" style={{ fontSize: '1.2em' }}>
+        <h2 className="mt5 accent lh-title">{post.frontmatter.title}</h2>
+        <div
+          className="lh-copy"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        >
+        </div>
       </article>
     </div>
   )
