@@ -20,6 +20,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           frontmatter {
             date
             path
+            tags
             title
           }
         }
@@ -33,7 +34,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     }
 
     forEach(({ node }) => createPage({
-      path: node.frontmatter.path,
+      path: `/blog/post/${node.frontmatter.path}`,
       component: blogPostTemplate,
       context: {} // additional data can be passed via context
     }), res.data.allMarkdownRemark.edges)
