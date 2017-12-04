@@ -11,8 +11,7 @@
     "gatsby-plugin-react-helmet": "^1.0.8",
     "luxon": "^0.1.0",
     "ramda": "^0.25.0",
-    "react-icons": "^2.2.7",
-    "tachyons": "^4.9.0"
+    "react-icons": "^2.2.7"
   },
   "keywords": [
     "gatsby"

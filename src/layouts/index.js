@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import 'tachyons'
-
 import { Navbar } from '../core'
 
 const TemplateWrapper = props => {

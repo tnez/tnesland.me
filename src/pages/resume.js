@@ -23,10 +23,7 @@ const presentLocation = location => `${location.city}, ${location.region_abbrv}`
 
 const Resume = props => (
   <div className="flex flex-wrap">
-    <div
-      className="w-100 w-third-l"
-      style={{ backgroundColor: color.primary, color: color.white }}
-    >
+    <div className="w-100 w-third-l bg-primary white">
       <article className="br2 pa4 lh-copy">
         <Avatar size={4} />
         <div className="mv2 lh">
@@ -94,10 +91,7 @@ const Resume = props => (
         </p>
       </article>
     </div>
-    <div
-      className="w-100 w-two-thirds-l ph4 ph5-l"
-      style={{ color: color.primary }}
-    >
+    <div className="w-100 w-two-thirds-l ph4 ph5-l primary">
       <article className="mt4">
         <h3 className="bb b--black-10">Skills</h3>
         {map(
@@ -128,8 +122,8 @@ const Resume = props => (
       </article>
     </div>
     <Link
-      className="fixed bottom-1 right-1 bg-red br-100 shadow-2"
-      style={{ color: color.white, fontSize: '2em' }}
+      className="fixed bottom-1 right-1 bg-red white br-100 shadow-2"
+      style={{ fontSize: '2em' }}
       to="/printable-resume"
     >
       <FaPrint className="pa2" />

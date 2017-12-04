@@ -3,13 +3,10 @@ import PropTypes from 'prop-types'
 import { addIndex, map } from 'ramda'
 import { DateTime as dt } from 'luxon'
 
-import { color } from '../../theme'
-
 const companyLink = (company, website) => (
   <a
-    className="fw3"
+    className="fw3 accent"
     href={website}
-    style={{ color: color.accent }}
     target="_blank"
   >
     {company}

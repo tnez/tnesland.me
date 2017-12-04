@@ -1,0 +1,25 @@
+/* colors */
+:root {
+  --color-accent: #429ea6;
+  --color-black: #252323;
+  --color-light: #f5f1ed;
+  --color-lightgrey: #BABEC5;
+  --color-primary: #153b50;
+  --color-white: #fbfbff;
+}
+
+.accent { color: var(--color-accent); }
+.black { color: var(--color-black); }
+.light { color: var(--color-light); }
+.lightgrey { color: var(--color-lightgrey); }
+.primary { color: var(--color-primary); }
+.white { color: var(--color-white); }
+
+.bg-accent { background-color: var(--color-accent); }
+.bg-black { background-color: var(--color-black); }
+.bg-light { background-color: var(--color-light); }
+.bg-lightgrey { background-color: var(--color-lightgrey); }
+.bg-primary { background-color: var(--color-primary); }
+.bg-white { background-color: var(--color-white); }
+
+body { background-color: var(--color-white); color: var(--color-primary) };
