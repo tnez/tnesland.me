@@ -4,6 +4,7 @@ import FaBook from 'react-icons/lib/fa/book'
 import FaEnvelope from 'react-icons/lib/fa/envelope'
 import FaGlobe from 'react-icons/lib/fa/globe'
 import FaGithubAlt from 'react-icons/lib/fa/github-alt'
+import FaHome from 'react-icons/lib/fa/home'
 import FaLinkedinSqure from 'react-icons/lib/fa/linkedin-square'
 import FaPhone from 'react-icons/lib/fa/phone'
 import FaPrint from 'react-icons/lib/fa/print'
@@ -18,6 +19,7 @@ import WorkEntry from '../modules/resume/work-entry'
 import resumeData from '../modules/resume/data'
 
 const presentHrefAsLabel = href => href.replace(/https?:\/\/(www\.)?/, '')
+const presentLocation = location => `${location.city}, ${location.region_abbrv}`
 
 const Resume = props => (
   <div className="flex flex-wrap">
@@ -32,6 +34,10 @@ const Resume = props => (
           <h4 className="mv0 fw4">{resumeData.basics.label}</h4>
         </div>
         <ul className="list mv3 ph0 tl lh-copy">
+          <li className="white-60">
+            <FaHome className="mr2" />
+            {presentLocation(resumeData.basics.location)}
+          </li>
           <li>
             <a
               className="link white-60"

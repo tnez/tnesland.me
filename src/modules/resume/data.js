@@ -11,6 +11,7 @@ export default {
       city: 'Charleston',
       countryCode: 'US',
       region: 'South Carolina',
+      region_abbrv: 'SC',
     },
     profiles: {
       github: {
