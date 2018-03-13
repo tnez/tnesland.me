@@ -23,6 +23,12 @@ const Navbar = props => {
           tnesland.me
         </Link>
         <Link
+          className="link lightgrey dim p2 ttl"
+          to="/blog"
+        >
+          Blog
+        </Link>
+        <Link
           className="link lightgrey dim ph2 ttl"
           target="_blank"
           to="/resume"

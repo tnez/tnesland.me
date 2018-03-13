@@ -1,5 +1,5 @@
 ---
-path: "/blog/first-gatsby-post"
+path: "/blog/post/first-gatsby-post"
 date: "2017-12-04"
 title: "My First Post Using Gatsby"
 tags: [foo,hello-world]

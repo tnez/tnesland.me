@@ -14,7 +14,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     ) {
       edges {
         node {
-          excerpt(pruneLength: 250)
+          excerpt(pruneLength: 160)
           html
           id
           frontmatter {
@@ -34,7 +34,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     }
 
     forEach(({ node }) => createPage({
-      path: `/blog/post/${node.frontmatter.path}`,
+      path: node.frontmatter.path,
       component: blogPostTemplate,
       context: {} // additional data can be passed via context
     }), res.data.allMarkdownRemark.edges)
