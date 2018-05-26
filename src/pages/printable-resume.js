@@ -9,7 +9,6 @@ import FaPhone from 'react-icons/lib/fa/phone'
 import { map } from 'ramda'
 
 import { Avatar } from '../core'
-import { color } from '../theme'
 
 import Publication from '../modules/resume/publication'
 import Skill from '../modules/resume/skill'
@@ -21,20 +20,15 @@ const presentLocation = location => `${location.city}, ${location.region_abbrv}`
 
 const styles = {
   root: {
-    color: color.primary,
     height: '11in',
     margin: '0 auto',
     width: '8.5in',
   },
-  leftPanel: {
-    backgroundColor: color.primary,
-    color: color.white,
-  },
 }
 
 const PrintableResume = props => (
-  <div className="flex" style={styles.root}>
-    <div className="h-100 w-30 pa4 pt2 fl" style={styles.leftPanel}>
+  <div className="flex primary" style={styles.root}>
+    <div className="h-100 w-30 pa4 pt2 fl bg-primary white">
       <div className="mv2">
         <h2 className="mv0">{resumeData.basics.name}</h2>
         <h4 className="mv1 fw4">{resumeData.basics.label}</h4>

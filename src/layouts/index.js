@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import 'tachyons'
-
 import { Navbar } from '../core'
 
 const TemplateWrapper = props => {
@@ -20,7 +18,7 @@ const TemplateWrapper = props => {
         ]}
       />
       {location.pathname.match(/(printable\-)?resume\/?/) ? null : <Navbar />}
-      <div>{children()}</div>
+      <div className="pa0">{children()}</div>
     </div>
   )
 }
