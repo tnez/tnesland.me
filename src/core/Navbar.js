@@ -13,23 +13,23 @@ const style = {
 const Navbar = props => {
   return (
     <div
-      className="fixed top-0 w-100 flex justify-between pa3 mb3 bg-white o-90"
+      className="fixed top-0 w-100 flex justify-between ph3 pv4 mb6 bg-white bb b--light-gray"
     >
-      <div className="flex">
+      <div className="flex justify-between">
         <Link
-          className="primary link dim ph2 fw7 ttl"
+          className="primary link dim pr2 fw7 ttl"
           to="/"
         >
           tnesland.me
         </Link>
         <Link
-          className="link lightgrey dim p2 ttl"
+          className="link lightgrey dim ph2 ttl"
           to="/blog"
         >
           Blog
         </Link>
         <Link
-          className="link lightgrey dim ph2 ttl"
+          className="link lightgrey dim pl2 ttl"
           target="_blank"
           to="/resume"
         >

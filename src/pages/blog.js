@@ -14,32 +14,28 @@ const backgroundImgSrc = post => {
 }
 
 const postPresenter = ({ node: post }) => (
-  <Link
-    className="link shadow-3 dib w-100 w-50-m w-30-l dim br3 bg-center cover ma3"
-    key={post.id}
-    style={{
-      backgroundImage: `url("${backgroundImgSrc(post)}")`,
-      height: '30em',
-      position: 'relative'
-    }}
-    to={post.frontmatter.path}
-  >
-    <article className="bg-primary white pa2 o-80 absolute bottom-0">
-      <h2 className="lh-title">{post.frontmatter.title}</h2>
-      <p className="lh-copy">{post.excerpt}</p>
-      <div className="accent">
-        <span className="bold white">Tags: </span>
-        {post.frontmatter.tags.join(', ')}
-      </div>
-    </article>
-  </Link>
+  <div className="primary mv4">
+    <Link
+      key={post.id}
+      to={post.frontmatter.path}
+      className="no-underline"
+    >
+      <h3 className="primary mv2">{post.frontmatter.title}</h3>
+      <span className="primary ma0">{post.frontmatter.date}</span>
+    </Link>
+    <div className="mv2">
+      <span className="b">Tags: </span>
+      <span className="accent">{post.frontmatter.tags.join(', ')}</span>
+    </div>
+  </div>
 )
 
 export default ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
 
   return (
-    <div className="ma4 mt5">
+    <div className="mh3 mv6">
+      <h2 className="primary">Recent Posts</h2>
       {map(postPresenter, posts)}
     </div>
   )
@@ -50,23 +46,12 @@ export const postQuery = graphql`
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
-          excerpt (pruneLength: 120)
           id
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
             path
             tags
-            heroImg {
-              childImageSharp {
-                resolutions(width: 400) {
-                  width
-                  height
-                  src
-                  srcSet
-                }
-              }
-            }
           }
         }
       }

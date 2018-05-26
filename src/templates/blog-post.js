@@ -12,11 +12,11 @@ export default ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <div>
+    <div className="mh3 mv6">
       <Helmet
         title={`tnesland.me - ${post.frontmatter.title}`}
       />
-      <article className="pa4">
+      <article>
         <h2 className="mt4 primary lh-title">{post.frontmatter.title}</h2>
         <div>
           {map(presentTag, post.frontmatter.tags)}
@@ -33,7 +33,7 @@ export default ({ data }) => {
 
 export const postQuery = graphql`
   query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path }}) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")

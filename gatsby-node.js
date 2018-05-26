@@ -1,7 +1,6 @@
 const path = require('path')
 const { forEach } = require('ramda')
 
-
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
 
@@ -14,14 +13,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     ) {
       edges {
         node {
-          excerpt(pruneLength: 160)
-          html
-          id
           frontmatter {
-            date
             path
-            tags
-            title
           }
         }
       }
@@ -29,7 +22,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   }`
   ).then(res => {
     if(res.errors) {
-      console.log(res.errors)
       return Promise.reject(res.errors)
     }
 

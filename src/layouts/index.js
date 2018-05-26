@@ -18,7 +18,7 @@ const TemplateWrapper = props => {
         ]}
       />
       {location.pathname.match(/(printable\-)?resume\/?/) ? null : <Navbar />}
-      <div>{children()}</div>
+      <div className="pa0">{children()}</div>
     </div>
   )
 }
