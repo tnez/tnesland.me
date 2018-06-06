@@ -48,19 +48,6 @@ export default {
       ],
     },
     {
-      company: 'EZWaves / SearchBookGo',
-      position: 'Sr. Software Developer',
-      website: 'http://www.ezwaves.net',
-      startDate: '2017-05-01',
-      endDate: '2017-08-31',
-      summary:
-        'Sr. Developer to a small product team (5 developers and one product manager) responsible for building out the admin and scheduling interface driving an activities booking platform. Left due to funding constraints, but proud of the team we had assembled.',
-      highlights: [
-        'Provided guidance, feedback, and knowledge to junior and mid-level devs',
-        'Built scheduling logic with respect to capacity and resource availability',
-      ],
-    },
-    {
       company: 'Canopy',
       position: 'Software Developer (Lead from Mar 2016 forward)',
       website: 'https://www.canopylawncare.com',
