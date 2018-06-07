@@ -36,6 +36,14 @@ export default {
   },
   work: [
     {
+      company: 'Sticker Mule',
+      position: 'Sr. Software Developer',
+      website: 'https://www.stickermule.com',
+      startDate: '2018-02-12',
+      summary: 'Part of a team responsible for maintaining and implementing new features for a high-volume, custom e-commerce solution, turning user-provided designs into custom marketing material for clients both small and large.',
+      highlights: []
+    },
+    {
       company: 'Farlab',
       position: 'Co-founder, Lead Developer',
       website: 'https://www.farlabhq.com',
