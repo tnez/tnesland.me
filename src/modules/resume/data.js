@@ -36,6 +36,14 @@ export default {
   },
   work: [
     {
+      company: 'Sticker Mule',
+      position: 'Sr. Software Developer',
+      website: 'https://www.stickermule.com',
+      startDate: '2018-02-12',
+      summary: 'Part of a team responsible for maintaining and implementing new features for a high-volume, custom e-commerce solution, turning user-provided designs into custom marketing material for clients both small and large.',
+      highlights: []
+    },
+    {
       company: 'Farlab',
       position: 'Co-founder, Lead Developer',
       website: 'https://www.farlabhq.com',
@@ -45,19 +53,6 @@ export default {
       highlights: [
         'Developed an interface to visualize and price 3D CAD models',
         'Currently developing platform to enable on-demand manufacturing and order fulfillment of physical goods',
-      ],
-    },
-    {
-      company: 'EZWaves / SearchBookGo',
-      position: 'Sr. Software Developer',
-      website: 'http://www.ezwaves.net',
-      startDate: '2017-05-01',
-      endDate: '2017-08-31',
-      summary:
-        'Sr. Developer to a small product team (5 developers and one product manager) responsible for building out the admin and scheduling interface driving an activities booking platform. Left due to funding constraints, but proud of the team we had assembled.',
-      highlights: [
-        'Provided guidance, feedback, and knowledge to junior and mid-level devs',
-        'Built scheduling logic with respect to capacity and resource availability',
       ],
     },
     {
