@@ -114,7 +114,9 @@ const Resume = props => (
         )}
       </article>
       <article className="mv4">
-        <h3 className="bb b--black-10">Publications</h3>
+        <h3 className="bb b--black-10">
+          Publications (as contributing author)
+        </h3>
         {map(
           props => <Publication key={props.name} {...props} />,
           resumeData.publications

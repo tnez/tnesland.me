@@ -119,7 +119,9 @@ const PrintableResume = props => (
         </span>
       </article>
       <article>
-        <h3 className="mb0 bb b--black-10">Publications</h3>
+        <h3 className="mb0 bb b--black-10">
+          Publications (as contributing author)
+        </h3>
         {map(
           props => (
             <Publication baseFontSize="12px" key={props.name} {...props} />
