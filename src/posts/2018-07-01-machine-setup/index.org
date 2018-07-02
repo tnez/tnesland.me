@@ -1,0 +1,39 @@
+#+TITLE: Machine Setup
+
+* Utilities
+** curl
+** emacs
+** fish
+** git
+** i3 tiling
+** nvm
+** python
+** rbenv
+** spacemacs
+** tmux
+** yarn
+   #+BEGIN_SRC sh
+     apt-get install --no-install-recommends yarn
+   #+END_SRC
+* GUI Applications
+** chrome
+** slack
+** spotify
+** vscode
+* Config
+** fish
+*** oh-my-fish
+**** rbenv
+**** vi-mode
+** git 
+*** gitconfig
+** spacemacs
+** ssh
+   1. Create a new key for the machine
+   #+BEGIN_SRC sh
+     ssh-keygen -t rsa -C tnesland@(hostname)
+   #+END_SRC
+   1. Add the new key to the following services:
+      a. GitHub
+
+** vscode
