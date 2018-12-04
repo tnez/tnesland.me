@@ -42,18 +42,19 @@ export default {
       startDate: '2018-02-12',
       summary:
         'Part of a team responsible for maintaining and implementing new features for a high-volume, custom e-commerce solution, turning user-provided designs into custom marketing material for clients both small and large.',
-      highlights: [],
+      highlights: ['Ship customer-facing features for our public storefront'],
     },
     {
       company: 'Farlab',
       position: 'Co-founder, Lead Developer',
-      website: 'https://www.farlabhq.com',
+      website:
+        'https://medium.com/@bryanchapl/the-future-of-manufacturing-c5f93da0ea73',
       startDate: '2017-07-01',
+      endDate: '2017-12-31',
       summary:
         'Co-founder and developer of a platform to provide transactional, on-demand manufacturing that scales from zero, reducing barrier of entry to the market for physical products.',
       highlights: [
         'Developed an interface to visualize and price 3D CAD models',
-        'Currently developing platform to enable on-demand manufacturing and order fulfillment of physical goods',
       ],
     },
     {
@@ -117,37 +118,20 @@ export default {
   skills: [
     {
       name: 'Web & Application Development',
-      keywords: [
-        'javascript',
-        'ES6/7/8',
-        'react',
-        'react-native',
-        'redux',
-        'd3',
-      ],
+      keywords: ['Javascript', 'ES6/7/8', 'React', 'Redux', 'GraphQL'],
     },
     {
       name: 'Platform Development',
-      keywords: [
-        'node',
-        'express',
-        'micro',
-        'ruby',
-        'postgresql',
-        'mongodb',
-        'pouchdb',
-        'redis',
-      ],
+      keywords: ['Node', 'Ruby', 'PostgreSQL', 'Redis'],
     },
     {
       name: 'Data Analysis',
       keywords: [
-        'python',
-        'numpy',
-        'networkx',
-        'scikit-learn',
-        'tensorflow',
-        'matplotlib',
+        'Python',
+        'Numpy',
+        'NetworkX',
+        'Scikit-Learn',
+        'Matplotlib',
         'R',
         'ggplot',
       ],
