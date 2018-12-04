@@ -47,13 +47,13 @@ export default {
     {
       company: 'Farlab',
       position: 'Co-founder, Lead Developer',
-      website: 'https://www.farlabhq.com',
+      website: 'https://medium.com/@bryanchapl/the-future-of-manufacturing-c5f93da0ea73',
       startDate: '2017-07-01',
+      endDate: '2017-12-31',
       summary:
         'Co-founder and developer of a platform to provide transactional, on-demand manufacturing that scales from zero, reducing barrier of entry to the market for physical products.',
       highlights: [
         'Developed an interface to visualize and price 3D CAD models',
-        'Currently developing platform to enable on-demand manufacturing and order fulfillment of physical goods',
       ],
     },
     {
