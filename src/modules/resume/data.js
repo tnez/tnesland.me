@@ -42,14 +42,13 @@ export default {
       startDate: '2018-02-12',
       summary:
         'Part of a team responsible for maintaining and implementing new features for a high-volume, custom e-commerce solution, turning user-provided designs into custom marketing material for clients both small and large.',
-      highlights: [
-        'Ship customer-facing features for our public storefront',
-      ],
+      highlights: ['Ship customer-facing features for our public storefront'],
     },
     {
       company: 'Farlab',
       position: 'Co-founder, Lead Developer',
-      website: 'https://medium.com/@bryanchapl/the-future-of-manufacturing-c5f93da0ea73',
+      website:
+        'https://medium.com/@bryanchapl/the-future-of-manufacturing-c5f93da0ea73',
       startDate: '2017-07-01',
       endDate: '2017-12-31',
       summary:
@@ -119,22 +118,11 @@ export default {
   skills: [
     {
       name: 'Web & Application Development',
-      keywords: [
-        'Javascript',
-        'ES6/7/8',
-        'React',
-        'Redux',
-        'GraphQL'
-      ],
+      keywords: ['Javascript', 'ES6/7/8', 'React', 'Redux', 'GraphQL'],
     },
     {
       name: 'Platform Development',
-      keywords: [
-        'Node',
-        'Ruby',
-        'PostgreSQL',
-        'Redis',
-      ],
+      keywords: ['Node', 'Ruby', 'PostgreSQL', 'Redis'],
     },
     {
       name: 'Data Analysis',
