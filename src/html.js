@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 
 let stylesStr
 if (process.env.NODE_ENV === `production`) {
@@ -29,8 +29,11 @@ module.exports = class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
-          <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
-          <link rel="stylesheet" href="/theme.css"/>
+          <link
+            rel="stylesheet"
+            href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"
+          />
+          <link rel="stylesheet" href="/theme.css" />
           {this.props.headComponents}
           {css}
         </head>

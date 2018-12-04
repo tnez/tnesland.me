@@ -4,11 +4,7 @@ import { addIndex, map } from 'ramda'
 import { DateTime as dt } from 'luxon'
 
 const companyLink = (company, website) => (
-  <a
-    className="fw3 accent"
-    href={website}
-    target="_blank"
-  >
+  <a className="fw3 accent" href={website} target="_blank">
     {company}
   </a>
 )
