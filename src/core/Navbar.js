@@ -12,14 +12,9 @@ const style = {
 
 const Navbar = props => {
   return (
-    <div
-      className="fixed top-0 w-100 flex justify-between ph3 pv4 mb6 bg-white bb b--light-gray"
-    >
+    <div className="fixed top-0 w-100 flex justify-between ph3 pv4 mb6 bg-white bb b--light-gray">
       <div className="flex justify-between">
-        <Link
-          className="primary link dim pr2 fw7 ttl"
-          to="/"
-        >
+        <Link className="primary link dim pr2 fw7 ttl" to="/">
           tnesland.me
         </Link>
         <Link

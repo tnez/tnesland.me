@@ -12,11 +12,7 @@ const Publication = props => {
   return (
     <article style={rootStyle}>
       <h4 className="fw4 mb1 measure-wide">
-        <a
-          className="link accent"
-          href={website}
-          target="_blank"
-        >
+        <a className="link accent" href={website} target="_blank">
           {name}
         </a>
         , {publisher}

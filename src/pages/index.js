@@ -1,7 +1,7 @@
 import React from 'react'
 
 const IndexPage = () => (
-    <div className="vh-100 flex items-center justify-center">
+  <div className="vh-100 flex items-center justify-center">
     <div>
       <p className="lightgrey f4 f3-m f2-l fw6 lh-copy">
         My name is Travis<br />

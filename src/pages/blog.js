@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { map } from 'ramda'
 
-
 const backgroundImgSrc = post => {
   try {
     return post.frontmatter.heroImg.childImageSharp.resolutions.src
@@ -15,11 +14,7 @@ const backgroundImgSrc = post => {
 
 const postPresenter = ({ node: post }) => (
   <div className="primary mv4">
-    <Link
-      key={post.id}
-      to={post.frontmatter.path}
-      className="no-underline"
-    >
+    <Link key={post.id} to={post.frontmatter.path} className="no-underline">
       <h3 className="primary mv2">{post.frontmatter.title}</h3>
       <span className="primary ma0">{post.frontmatter.date}</span>
     </Link>
