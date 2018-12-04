@@ -112,6 +112,10 @@ const Resume = props => (
           props => <WorkEntry key={props.company} {...props} />,
           resumeData.work
         )}
+        <span className="i fw2">
+          <br />
+          additional work history available upon request
+        </span>
       </article>
       <article className="mv4">
         <h3 className="bb b--black-10">
