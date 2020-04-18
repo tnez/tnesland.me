@@ -1,8 +1,6 @@
-# Project dependencies
-# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
-node_modules
-.cache/
-# Build directory
-public/
 .DS_Store
+/node_modules/
+/src/node_modules/@sapper/
 yarn-error.log
+/cypress/screenshots/
+/__sapper__/
