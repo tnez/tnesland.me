@@ -1,6 +1,6 @@
 import React from 'react'
 
-function IndexPage() {
+function IndexPage(): React.ReactElement {
   return (
     <div className="vh-100 flex items-center justify-center">
       <div>
