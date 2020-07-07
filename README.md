@@ -9,15 +9,13 @@ This is my personal website which serves as access point for:
 
 ## Development
 
-This site is built using Gatsby: https://www.gatsbyjs.org
-
 ### Install Dependencies
 
-`yarn install`
+`npm ci`
 
 ### Run Development Server
 
-`yarn run develop`
+`npm run dev`
 
 ### Test Production Build
 
@@ -25,11 +23,11 @@ Site is built on deploy and exists in a fundamentally different manner than when
 
 Build with:
 
-`yarn run build`
+`npm run build`
 
 Then serve with:
 
-`yarn run gatsby serve`
+`npm run start`
 
 ### Deploy
 

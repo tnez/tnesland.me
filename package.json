@@ -1,36 +1,41 @@
 {
-  "name": "tnez--tnesland.me",
+  "name": "@tnez/tnesland.me",
   "description": "Personal Website for Travis Nesland",
   "version": "3.0.0",
   "license": "MIT",
   "private": true,
-  "dependencies": {
-    "gatsby": "^1.9.110",
-    "gatsby-link": "^1.6.27",
-    "gatsby-plugin-catch-links": "^1.0.13",
-    "gatsby-plugin-react-helmet": "^1.0.8",
-    "gatsby-plugin-sharp": "^1.6.41",
-    "gatsby-transformer-sharp": "^1.6.22",
-    "luxon": "^0.1.0",
-    "ramda": "^0.25.0",
-    "react-icons": "^2.2.7"
-  },
   "keywords": [
-    "gatsby"
+    "blog",
+    "nextjs",
+    "personal",
+    "website"
   ],
   "main": "n/a",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "next",
+    "build": "next build",
+    "lint": "eslint '*/**/*.{js,ts,tsx}'",
+    "lint:fix": "npm run lint -- --fix",
+    "start": "next start",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "next": "9.4.4",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-icons": "2.2.7"
+  },
   "devDependencies": {
-    "gatsby-remark-copy-linked-files": "^1.5.22",
-    "gatsby-remark-images": "^1.5.33",
-    "gatsby-remark-prismjs": "^1.2.10",
-    "gatsby-source-filesystem": "^1.5.9",
-    "gatsby-transformer-remark": "^1.7.23",
-    "prettier": "^1.8.2"
+    "@types/node": "14.0.14",
+    "@types/react": "16.9.41",
+    "@typescript-eslint/eslint-plugin": "3.5.0",
+    "@typescript-eslint/parser": "3.5.0",
+    "eslint": "7.3.1",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "eslint-plugin-react": "7.20.3",
+    "prettier": "2.0.5",
+    "typescript": "3.9.6"
   }
 }
