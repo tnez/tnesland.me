@@ -5,4 +5,9 @@ module.exports = withMdxEnhanced({
   fileExtensions: ['mdx'],
   remarkPlugins: [],
   rehypePlugins: [],
-})()
+})({
+  webpack(config) {
+    config.node = { fs: 'empty' }
+    return config
+  },
+})

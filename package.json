@@ -13,7 +13,7 @@
   "main": "n/a",
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "next build && next export",
     "lint": "eslint '*/**/*.{js,ts,tsx}'",
     "lint:fix": "npm run lint -- --fix",
     "start": "next start",

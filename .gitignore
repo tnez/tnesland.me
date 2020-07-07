@@ -3,4 +3,4 @@
 .mdx-data/
 .next/
 node_modules/
-public/
+out/
