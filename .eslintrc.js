@@ -21,5 +21,6 @@ module.exports = {
   rules: {
     'react/prop-types': 0,
     '@typescript-eslint/no-use-before-define': 0,
+    '@typescrript-eslint/no-var-requires': 0,
   },
 }
