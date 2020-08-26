@@ -1,8 +1,10 @@
 ---
-path: "/blog/post/packing-list-minimal"
-date: "2020-07-02"
-title: "Packing List: Minimal"
-tags: [list,travel]
+path: /blog/post/packing-list-minimal
+date: 2020-07-02T00:00:00-04:00
+title: 'Packing List: Minimal'
+tags: [list, travel]
+type: Journal
+modified: 2020-08-25T20:15:11-04:00
 ---
 
 Every time I go to pack I rack my brain and make a list of what I need. It would be useful if I had a list. So here we go. This is my packing list for a short trip.
@@ -17,7 +19,7 @@ Every time I go to pack I rack my brain and make a list of what I need. It would
 - 5W USB AC adapter ( _I use the one that came with one of my Amazon devices_ )
 - USB to USB-C charging cable
 - USB to Micro-USB charging cable
-- travel battery backup ( _make sure it's charged_ )
+- travel battery backup ( _make sure it's charged_ ) something about this makes me happy
 
 ### Toiletries
 
