@@ -1,8 +1,10 @@
 ---
-path: "/blog/post/weekly-review-2020-07-05"
-date: "2020-07-05"
-title: "Weekly Review: 2020-07-05"
+path: /blog/post/weekly-review-2020-07-05
+date: 2020-07-05T00:00:00-04:00
+title: 'Weekly Review: 2020-07-05'
 tags: [weekly-review]
+type: Checklist
+modified: 2020-08-27T20:54:21-04:00
 ---
 
 ### Last Week
